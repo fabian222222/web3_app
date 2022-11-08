@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import { SafeAreaView, Text, StyleSheet } from "react-native"
+import { SafeAreaView, StyleSheet, Text } from 'react-native'
 
-export default function UserScreen() {
+const WalletScreen = () => {
     return (
         <SafeAreaView style={ styles.container }>
-            <Text>This is my home page</Text>
+            <Text>This is my wallet page</Text>
         </SafeAreaView>
-    );
+    )
 }
 
 const styles = StyleSheet.create({
@@ -17,3 +17,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     }
 })
+
+export default WalletScreen

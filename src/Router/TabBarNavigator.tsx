@@ -1,9 +1,10 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React from 'react';
 
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
 
 import HomeStackScreen from './../Screens/Home/HomeScreen'
-import React from 'react';
+import WalletScreen from './../Router/Stacks/Wallet/WalletStackScreens'
 
 const Tab = createBottomTabNavigator();
 
@@ -15,6 +16,15 @@ export default function TabBarNavigator() {
                 options={{
                     tabBarIcon: () => (
                         <FontAwesome name="home" size={24} color="black" />
+                    )
+                }}     
+            />
+
+            <Tab.Screen 
+                name="WalletStack" component={ WalletScreen } 
+                options={{
+                    tabBarIcon: () => (
+                        <FontAwesome name="money" size={24} color="black" />
                     )
                 }}     
             />
