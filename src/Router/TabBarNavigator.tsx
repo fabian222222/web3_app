@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
 
 import HomeStackScreen from './../Screens/Home/HomeScreen'
+import React from 'react';
 
 const Tab = createBottomTabNavigator();
 
