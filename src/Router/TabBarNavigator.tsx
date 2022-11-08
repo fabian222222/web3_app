@@ -5,6 +5,7 @@ import { FontAwesome } from '@expo/vector-icons';
 
 import HomeStackScreen from './../Screens/Home/HomeScreen'
 import WalletScreen from './../Router/Stacks/Wallet/WalletStackScreens'
+import StoreStackScreens from './../Router/Stacks/Store/StoreStackScreens'
 
 const Tab = createBottomTabNavigator();
 
@@ -19,7 +20,14 @@ export default function TabBarNavigator() {
                     )
                 }}     
             />
-
+            <Tab.Screen 
+                name="StoreStack" component={ StoreStackScreens } 
+                options={{
+                    tabBarIcon: () => (
+                        <FontAwesome name="shopping-basket" size={24} color="black" />
+                    )
+                }}     
+            />
             <Tab.Screen 
                 name="WalletStack" component={ WalletScreen } 
                 options={{
