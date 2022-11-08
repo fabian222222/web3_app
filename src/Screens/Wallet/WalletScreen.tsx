@@ -1,11 +1,17 @@
 import React from 'react'
 
-import { SafeAreaView, StyleSheet, Text } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, Button } from 'react-native'
 
-const WalletScreen = () => {
+const WalletScreen = ( {navigation} ) => {
     return (
         <SafeAreaView style={ styles.container }>
             <Text>This is my wallet page</Text>
+            <Button 
+                title='Go to history page'
+                onPress={() => {
+                    navigation.navigate('WalletHistory')
+                }}
+            />
         </SafeAreaView>
     )
 }

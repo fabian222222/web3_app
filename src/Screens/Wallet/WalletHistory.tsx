@@ -2,10 +2,10 @@ import React from 'react'
 
 import { SafeAreaView, StyleSheet, Text } from 'react-native'
 
-const CryptoCurrency = () => {
+const WalletHistory = () => {
     return (
         <SafeAreaView style={ styles.container }>
-            <Text>This is my crypto component</Text>
+            <Text>This is my wallet history page</Text>
         </SafeAreaView>
     )
 }
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default CryptoCurrency
+export default WalletHistory
