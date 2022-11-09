@@ -4,7 +4,6 @@ import { View, StyleSheet, Text, Image } from 'react-native'
 import { MostListen } from '../../../Interface/Wallet/MostListen'
 
 const MostListenMusic = ({music}: {music: MostListen}) => {
-    console.log(music);
     return (
         <View style={ styles.container } >
             <Image
