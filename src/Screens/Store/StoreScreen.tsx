@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { SafeAreaView, Text, StyleSheet, TextInput, View  } from "react-native"
+import { StyleSheet, TextInput, View, ScrollView   } from "react-native"
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { FavoriteArtists, NewAlbums }  from '../../Components/Store/ArtistAndAlbum/ArtistList'
+import { FavoriteArtists, NewAlbums, BestSells }  from '../../Components/Store/ArtistAndAlbum/ArtistList'
 import { colors } from '../../DesignSystem/Colors'
 export default function StoreDetailScreen() {
     return (
-        <SafeAreaView style={ styles.container }>
+        <ScrollView style={ styles.container }>
             <View style={styles.searchSection}>
                 <Ionicons style={styles.searchIcon} name="ios-search" size={32} color="green" />
                 <TextInput
@@ -17,7 +17,8 @@ export default function StoreDetailScreen() {
             </View>
             <FavoriteArtists/>
             <NewAlbums/>
-        </SafeAreaView>
+            <BestSells/>
+        </ScrollView>
     );
 }
 
