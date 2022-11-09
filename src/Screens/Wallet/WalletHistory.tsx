@@ -4,6 +4,7 @@ import { SafeAreaView, StyleSheet, View, Text, TouchableOpacity } from 'react-na
 import { colors } from '../../DesignSystem/Colors'
 
 import MostListenMusics from '../../Components/Wallet/MostListenMusic/MostListenMusics'
+import ListenStat from '../../Components/Wallet/ListenStat/ListenStat'
 
 const WalletHistory = () => {
 
@@ -42,6 +43,9 @@ const WalletHistory = () => {
             <View style={page === MOST_LITSEN ? styles.display : styles.hide } >
                 <MostListenMusics />
             </View>
+            <View style={page === ALL_LITSEN ? styles.display : styles.hide } >
+                <ListenStat />
+            </View>
         </SafeAreaView>
     )
 }
@@ -59,6 +63,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         borderRadius: 50,
         overflow: 'hidden',
+        marginBottom: 20,
     },
     toggle: {
         width: '50%',
@@ -82,6 +87,7 @@ const styles = StyleSheet.create({
     },
     display: {
         display: 'flex',
+        flex: 1
     }
 })
 
