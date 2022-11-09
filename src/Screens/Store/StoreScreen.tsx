@@ -1,26 +1,52 @@
-import React from 'react'
+import React from 'react';
 
-import { SafeAreaView, StyleSheet, Text, Button } from 'react-native'
-
-const StoreScreen = ({navigation}) => {
+import { SafeAreaView, Text, StyleSheet, TextInput, View  } from "react-native"
+import Ionicons from '@expo/vector-icons/Ionicons';
+import { FavoriteArtists }  from '../../Components/Store/FavArtistList/ArtistList'
+import { colors } from '../../DesignSystem/Colors'
+export default function StoreDetailScreen() {
     return (
         <SafeAreaView style={ styles.container }>
-            <Text>This is my wallet page</Text>
-            <Button 
-                title='Go to store detail page'
-                onPress={() => {
-                    navigation.navigate('StoreDetail')
-                }}
-            />
+            <View style={styles.searchSection}>
+                <Ionicons style={styles.searchIcon} name="ios-search" size={32} color="green" />
+                <TextInput
+                    style={styles.input}
+                    placeholderTextColor="white" 
+                    placeholder="Rechercher un artiste, une musique..."
+                />
+            </View>
+            <FavoriteArtists/>
         </SafeAreaView>
-    )
+    );
 }
+
 const styles = StyleSheet.create({
     container: {
         height: '100%',
-        alignItems: 'center',
+        backgroundColor: colors.backgroundBlueBlack,
+    },
+    searchSection: {
+        flexDirection: 'row',
         justifyContent: 'center',
-    }
-})
+        alignItems: 'center',
+        backgroundColor: colors.backgroundBlueBlack,
+    },
+    searchIcon: {
+        position: 'absolute',
+        right: 30,
+        zIndex: 1,
+        color: '#A54AFF',
+        fontSize: 24
+    },
+    input: {
+        width: '90%',
+        borderRadius: 12.2,
+        borderColor: 'rgba(165, 74, 255, 0.3)',
+        backgroundColor: 'rgba(165, 74, 255, 0.3)',
+        height: 40,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+    },
 
-export default StoreScreen
+})
