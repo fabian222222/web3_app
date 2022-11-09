@@ -1,19 +1,157 @@
 import React from 'react';
 
-import { SafeAreaView, Text, StyleSheet } from "react-native"
+import { SafeAreaView, Text, StyleSheet, View, Image } from "react-native"
 
-export default function UserScreen() {
+export default function HomeScreen() {
     return (
-        <SafeAreaView style={ styles.container }>
-            <Text>This is my home page</Text>
-        </SafeAreaView>
+        <View style={ styles.container }>
+            <View> 
+                <View>           
+                    <Text style={ styles.title }>Vous écoutez : </Text>
+                    <View></View>
+                </View>
+                <View></View>
+            </View>
+
+
+            <Text style={ styles.title }>Résumé</Text>
+            <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection:'row', marginVertical: 20}}>
+                <View style={ styles.blockToken }>
+                    <Text style={ styles.title }>Token Artiste</Text>
+                </View>
+                <View style={ styles.blockToken }>
+                    <Text style={ styles.title }>Token Global</Text>
+                </View>
+            </View>
+
+            
+            <Text style={ styles.title }>Historique d'écoute</Text>
+            <View style={{ display: 'flex', justifyContent: 'space-between', height: '36%'}}>
+                <View style={ styles.blockSong }>
+                    <Image
+                        style={ styles.albumCover }
+                        source={require('../../../assets/images/albumCover/album1.png')} 
+                    />
+                    <View>
+                        <Text style={ styles.songTitle }>Song name - Artist</Text>
+                        <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row'}}>
+                            <Text style={ styles.songText }>Duration session </Text>
+                            <Text style={ styles.songText }> token: 20</Text>
+                        </View>
+                    </View>
+                    <Image
+                        // style={ styles.albumCover }
+                        source={require('../../../assets/spotify.png')} 
+                    />
+                </View>
+                <View style={ styles.blockSong }>
+                    <Image
+                        style={ styles.albumCover }
+                        source={require(`../../../assets/images/albumCover/album2.png`)} 
+                    />
+                     <View>
+                        <Text style={ styles.songTitle }>Song name - Artist</Text>
+                        <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row'}}>
+                            <Text style={ styles.songText }>Duration session </Text>
+                            <Text style={ styles.songText }> token: 20</Text>
+                        </View>
+                    </View>
+                    <Image
+                        // style={ styles.albumCover }
+                        source={require('../../../assets/apple.png')} 
+                    />
+                </View>
+                <View style={ styles.blockSong }>
+                    <Image
+                        style={ styles.albumCover }
+                        source={require(`../../../assets/images/albumCover/album3.png`)} 
+                    />
+                    <View>
+                        <Text style={ styles.songTitle }>Song name - Artist</Text>
+                        <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row'}}>
+                            <Text style={ styles.songText }>Duration session </Text>
+                            <Text style={ styles.songText }> token: 20</Text>
+                        </View>
+                    </View>
+                    <Image
+                        // style={ styles.albumCover }
+                        source={require('../../../assets/youtube.png')} 
+                    />
+                </View>
+            </View>
+
+
+            <Text style={ styles.title }>Comment ça fonctionne ?</Text>
+            <View style={ styles.button }>
+                <Text style={ styles.title }>Voir les explications</Text>
+            </View>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
+        width: '100%',
         height: '100%',
-        alignItems: 'center',
+        backgroundColor: '#23262B',
+        paddingHorizontal: 20,
+        paddingTop: 40
+    },
+    title: {
+        fontSize: 18,
+        fontWeight: '500',
+        color: '#FFFFFF',
+    },
+    blockToken: {
+        backgroundColor: '#2D293B',
+        borderRadius: 12,
+        width: 165,
+        height: 92,
+        display: 'flex',
         justifyContent: 'center',
+        alignItems: 'center'
+    },
+    blockSong: {
+        backgroundColor: '#2D293B',
+        borderRadius: 12,
+        width: '100%',
+        height: 70,
+        display: 'flex',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        alignItems: 'center',
+        paddingHorizontal: 10,
+    },
+    albumCover: {
+        width: 50,
+        height: 50,
+        borderRadius: 15,
+    },
+    blockApp: {
+        width: 50,
+        height: 50,
+        borderRadius: 15,
+        marginRight: 15,
+        backgroundColor: '#FFFFFF'
+    },
+    songTitle: {
+        color: '#FFFFFF',
+        fontSize: 16,
+        fontWeight: '500',
+    },
+    songText: {
+        color: '#FFFFFF',
+        fontSize: 14,
+        fontWeight: '300',
+    },
+    button: {
+        backgroundColor: '#4A316A',
+        borderRadius: 12,
+        width: '100%',
+        height: 48,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+
     }
 })
