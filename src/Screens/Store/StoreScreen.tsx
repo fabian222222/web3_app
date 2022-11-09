@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SafeAreaView, Text, StyleSheet, TextInput, View  } from "react-native"
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { FavoriteArtists }  from '../../Components/Store/FavArtistList/ArtistList'
+import { FavoriteArtists, NewAlbums }  from '../../Components/Store/ArtistAndAlbum/ArtistList'
 import { colors } from '../../DesignSystem/Colors'
 export default function StoreDetailScreen() {
     return (
@@ -16,6 +16,7 @@ export default function StoreDetailScreen() {
                 />
             </View>
             <FavoriteArtists/>
+            <NewAlbums/>
         </SafeAreaView>
     );
 }

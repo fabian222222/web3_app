@@ -4,7 +4,6 @@ import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native'
 import { FavoriteArtist } from '../../../Interface/Store/FavoriteArtist'
 
 const ArtistCover = ({artist}: {artist: FavoriteArtist}) => {
-    console.log(artist);
     return (
         <TouchableOpacity>
             <View style={ styles.container } >

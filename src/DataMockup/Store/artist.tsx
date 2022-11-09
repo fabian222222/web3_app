@@ -1,4 +1,4 @@
-import { FavoriteArtist } from './../../Interface/Store/FavoriteArtist'
+import { FavoriteArtist } from '../../Interface/Store/FavoriteArtist'
 
 export const favArtistData = [
     {
