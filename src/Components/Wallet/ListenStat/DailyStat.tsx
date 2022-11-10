@@ -47,7 +47,9 @@ const DailyStat = () => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingBottom: 20
+        backgroundColor: 'rgba(165, 74, 255, .08)',
+        paddingVertical: 20,
+        borderRadius: 20
     },
     dayContainer: {
         paddingHorizontal: 40,
@@ -71,7 +73,7 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'space-between',
         marginTop: 20,
-        paddingHorizontal: 15
+        paddingHorizontal: 15,
     }
 })
 

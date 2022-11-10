@@ -26,7 +26,7 @@ const AlbumStats = ({ title, albums }: {title: string, albums: AllListen[]}) => 
 const styles = StyleSheet.create({
     statBlockContainer: {
         marginBottom: 30,
-        backgroundColor: 'rgba(217, 217, 217, .06)',
+        backgroundColor: 'rgba(165, 74, 255, .08)',
         borderRadius: 15,
         paddingHorizontal: 20,
         paddingVertical: 10,
