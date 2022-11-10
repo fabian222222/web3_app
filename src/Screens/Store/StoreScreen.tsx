@@ -7,20 +7,23 @@ import Music from '../../Components/Home/Music'
 import { colors } from '../../DesignSystem/Colors'
 export default function StoreDetailScreen() {
     return (
-        <ScrollView style={ styles.container }>
-            <View style={styles.searchSection}>
-                <Ionicons style={styles.searchIcon} name="ios-search" size={32} color="green" />
-                <TextInput
-                    style={styles.input}
-                    placeholderTextColor="white"
-                    placeholder="Rechercher un artiste, une musique..."
-                />
-            </View>
-            <FavoriteArtists/>
-            <NewAlbums/>
-            <BestSells/>
+        <View style={ styles.container }>
+            <ScrollView>
+                <View style={styles.searchSection}>
+                    <Ionicons style={styles.searchIcon} name="ios-search" size={32} color="green" />
+                    <TextInput
+                        style={styles.input}
+                        placeholderTextColor="white"
+                        placeholder="Rechercher un artiste, une musique..."
+                        />
+                </View>
+                <FavoriteArtists/>
+                <NewAlbums/>
+                <BestSells/>
+            </ScrollView>
+
             <Music />
-        </ScrollView>
+        </View>
     );
 }
 
