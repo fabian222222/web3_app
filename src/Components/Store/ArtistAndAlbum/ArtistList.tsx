@@ -59,15 +59,17 @@ export function BestSells() {
                 <View style={ stylesAlbum.scroll }>
                     <TouchableOpacity>
                         <View style={ stylesBestSells.item } >
-                            <Image
-                                style={ stylesBestSells.albumCover }
-                                source={require(`./../../../../assets/images/albumCover/Frame5.png`)} 
-                            />
-                            <View style={ stylesBestSells.infoText }>
-                                <Text style={ stylesBestSells.albumText }>Die,Die,Crucify</Text>
-                                <Text style={ stylesBestSells.text }>5min:15s</Text>
+                            <View style={stylesBestSells.bestSellsContainer} >
+                                <Image
+                                    style={ stylesBestSells.albumCover }
+                                    source={require(`./../../../../assets/images/albumCover/Frame5.png`)} 
+                                />
+                                <View style={ stylesBestSells.infoText }>
+                                    <Text style={ stylesBestSells.albumText }>Die,Die,Crucify</Text>
+                                    <Text style={ stylesBestSells.text }>5min:15s</Text>
+                                </View>
                             </View>
-                            <FontAwesome style={ stylesBestSells.playIcon } name="play" size={15} color="white" />
+                            <FontAwesome style={stylesBestSells.icon} name="play" size={15} color="white" />
                         </View>
                     </TouchableOpacity>
                 </View>
@@ -98,12 +100,12 @@ const stylesBestSells = StyleSheet.create({
         marginLeft: 20,
     },
     infoText: {
-        marginLeft: -140
+        marginLeft: 10,
+        justifyContent: 'space-between',
     },
     item: {
-        margin: 5,
-        marginLeft: 10,
-        width: 350,
+        paddingHorizontal: 10,
+        width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between'
@@ -121,10 +123,6 @@ const stylesBestSells = StyleSheet.create({
         width: 62,
         height: 61,
         borderRadius: 12.2,
-        alignItems: 'center'
-    },
-    playIcon: {
-        marginLeft: 20
     },
     albumText: {
         lineHeight: 26,
@@ -134,7 +132,15 @@ const stylesBestSells = StyleSheet.create({
     },
     text: {
         fontSize: 14,
-        color: 'white'
+        color: 'white',
+        marginBottom: 10
+    },
+    bestSellsContainer: {
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+    },
+    icon: {
+        marginRight: 10
     }
 })
 
