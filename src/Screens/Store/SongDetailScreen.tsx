@@ -3,13 +3,13 @@ import { SafeAreaView, Text, StyleSheet, TextInput, View, Image, TouchableOpacit
 import { colors } from '../../DesignSystem/Colors'
 import { useRoute } from '@react-navigation/native';
 import {  useNavigation } from "@react-navigation/native";
-import { Album } from '../../Interface/Store/FavoriteArtist'
+import { Song } from '../../Interface/Store/FavoriteArtist'
 
 import { AlbumSelected } from '../../Components/Store/ArtistAndAlbum/ArtistStore'
 import { AlbumTitles } from '../../Components/Store/ArtistAndAlbum/AlbumCover'
 
-export default function ArtistDetailScreen() {
-    const { params: album } = useRoute() as {params: Album}
+export default function SongDetailScreen() {
+    const { params: songData } = useRoute() as {params: Song}
     let navigation = useNavigation();
     
     return (
@@ -25,11 +25,10 @@ export default function ArtistDetailScreen() {
                             source={require(`./../../../assets/btnBack.png`)} 
                         />
                     </TouchableOpacity>
-                    <Text style={ styles.headerTitleName }>{album.artistName}</Text>
+                    <Text style={ styles.headerTitleName }>{songData.name}</Text>
                 </View >
             </View>
-            <AlbumSelected buy={"Acheter l'album"}/>
-            <AlbumTitles song={album.song}/>
+            <AlbumSelected buy={"Acheter le single"}/>
 
         </SafeAreaView>
     );
@@ -42,7 +41,6 @@ const styles = StyleSheet.create({
     },
     header: {
         height: 75,
-        width: '100%',
         position: 'absolute',
     },
     headerTitle: {

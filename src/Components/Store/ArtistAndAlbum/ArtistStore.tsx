@@ -84,7 +84,7 @@ export function ArtistAlbums({ albums }: Pick<FavoriteArtist, "albums">) {
   );
 }
 
-export function AlbumSelected() {
+export function AlbumSelected({buy}: { buy: string }) {
   return (
     <View style={stylesAlbumSelected.componentsContainer}>
       <Image
@@ -103,7 +103,7 @@ export function AlbumSelected() {
         </Text>
         <Text style={stylesAlbumSelected.rate}>Prix de l’album : 3 SOL</Text>
         <TouchableOpacity style={stylesAlbumSelected.btnBuy}>
-          <Text>Acheter l’album</Text>
+          <Text>{buy}</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -227,7 +227,7 @@ const stylesBestSells = StyleSheet.create({
   item: {
     margin: 5,
     marginLeft: 10,
-    width: 350,
+    width: '98%',
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -241,7 +241,7 @@ const stylesBestSells = StyleSheet.create({
     marginTop: 10,
     marginLeft: -10,
     padding: 5,
-    width: 370,
+    width: '100%',
     borderRadius: 12.2,
     backgroundColor: "rgba(165, 74, 255, 0.08)",
   },

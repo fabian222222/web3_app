@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
         backgroundColor: colors.backgroundBlueBlack,
     },
     albumCover: {
-        position: 'absolute'
+        position: 'absolute',
+        width: '100%'
     },
     btnBack: {
         marginTop: 25,

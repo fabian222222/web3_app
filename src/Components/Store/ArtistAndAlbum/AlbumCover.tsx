@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text, Image, TouchableOpacity, FlatList } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 import { Album, FavoriteArtist, Song } from "../../../Interface/Store/FavoriteArtist";
 import { NewAlbum } from "../../../Interface/Store/NewAlbum";
@@ -8,11 +9,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 
 const SongItem = ({songData}: {songData: Song}) => {
-  // let navigation = useNavigation();
-
-  
+  let navigation = useNavigation();
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => navigation.navigate<{}>("SongDetail", songData)}
+    >
       <View style={stylesAlbumTitles.songItem}>
         <Image
           style={stylesAlbumTitles.songAlbum}
@@ -115,7 +116,7 @@ const stylesAlbumTitles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     height: 70,
-    width: 350,
+    width: '95%',
     backgroundColor: 'rgba(165, 74, 255, 0.08)',
     borderRadius: 12.2,
     alignItems: 'center'
