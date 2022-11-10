@@ -6,11 +6,11 @@ import {  useNavigation } from "@react-navigation/native";
 import { Album } from '../../Interface/Store/FavoriteArtist'
 
 import { AlbumSelected } from '../../Components/Store/ArtistAndAlbum/ArtistStore'
+import { AlbumTitles } from '../../Components/Store/ArtistAndAlbum/AlbumCover'
 
 export default function ArtistDetailScreen() {
     const { params: album } = useRoute() as {params: Album}
     let navigation = useNavigation();
-    console.log(album.artistName);
     
     return (
         <SafeAreaView style={ styles.container }>
@@ -29,6 +29,8 @@ export default function ArtistDetailScreen() {
                 </View >
             </View>
             <AlbumSelected/>
+            <AlbumTitles song={album.song}/>
+
         </SafeAreaView>
     );
 }

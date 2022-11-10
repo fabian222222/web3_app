@@ -48,7 +48,7 @@ export function FamousArtistSong() {
               />
               <View style={stylesBestSells.infoText}>
                 <View style={stylesBestSells.data}>
-                  <Text style={stylesBestSells.albumText}>Fadd</Text>
+                  <Text style={stylesBestSells.albumText}>Popular Song 1</Text>
                   <Text style={stylesBestSells.text}>
                     Nombre d’écoute : Nombre d’écoute
                   </Text>

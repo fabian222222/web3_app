@@ -28,7 +28,7 @@ export default function ArtistDetailScreen() {
                 </View>
             </TouchableOpacity>
             <FamousArtistSong/>
-            <ArtistAlbums albums={ artistData.albums } />
+            <ArtistAlbums albums={ artistData.albums } />     
         </SafeAreaView>
     );
 }

@@ -10,11 +10,15 @@ export interface FavoriteArtist {
 export interface Album {
     albumName: string
     albumLenght: string
-    listener: number
     artistName: string
-    isTrending: boolean
+    song: Song[]
 }
 
+export interface Song {
+    name: string
+    listener: number
+    isTrending: boolean
+}
 interface TopSong {
     name: string
     listenCount: string
