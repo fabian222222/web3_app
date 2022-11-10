@@ -52,7 +52,7 @@ const AlbumCover = ({ album }: { album: NewAlbum }) => {
       <View style={styles.container}>
         <Image
           style={styles.albumCover}
-          source={require(`./../../../../assets/images/albumCover/Album5.png`)}
+          source={require(`./../../../../assets/images/albumCover/Album10.png`)}
         />
         <View style={styles.titlesContainer}>
           <View>
