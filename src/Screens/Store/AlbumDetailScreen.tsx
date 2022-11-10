@@ -16,8 +16,8 @@ export default function ArtistDetailScreen() {
         <View style={ styles.container }>
             <View >
                 <Image style={ styles.header }
-                        source={require(`./../../../assets/images/store/bannière.png`)} 
-                    />
+                    source={require(`./../../../assets/images/store/bannière.png`)} 
+                />
                 <View style={ styles.headerTitle }>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
                         <Image
