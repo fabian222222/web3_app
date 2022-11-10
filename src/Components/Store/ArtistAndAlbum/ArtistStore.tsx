@@ -161,7 +161,7 @@ const stylesAlbumSelected = StyleSheet.create({
 
 const stylesSong = StyleSheet.create({
   componentsContainer: {
-    marginTop: 40,
+    marginTop: 10,
     marginLeft: 20,
   },
   titleFavArtist: {

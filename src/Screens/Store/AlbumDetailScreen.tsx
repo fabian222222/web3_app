@@ -13,7 +13,7 @@ export default function ArtistDetailScreen() {
     let navigation = useNavigation();
     
     return (
-        <SafeAreaView style={ styles.container }>
+        <View style={ styles.container }>
             <View >
                 <Image style={ styles.header }
                         source={require(`./../../../assets/images/store/bannière.png`)} 
@@ -31,7 +31,7 @@ export default function ArtistDetailScreen() {
             <AlbumSelected buy={"Acheter l'album"}/>
             <AlbumTitles song={album.song}/>
 
-        </SafeAreaView>
+        </View>
     );
 }
 

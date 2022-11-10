@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         marginLeft: 20
     },
     artistTitle: {
-        marginTop: 50,
+        marginTop: 40,
         marginLeft: 20
     },
     artistNameTitle: {

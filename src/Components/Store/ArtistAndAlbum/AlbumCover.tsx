@@ -52,7 +52,7 @@ const AlbumCover = ({ album }: { album: NewAlbum }) => {
       <View style={styles.container}>
         <Image
           style={styles.albumCover}
-          source={require(`./../../../../assets/images/albumCover/Album10.png`)}
+          source={require(`./../../../../assets/images/albumCover/album11.png`)}
         />
         <View style={styles.titlesContainer}>
           <View>
@@ -77,16 +77,16 @@ export function AlbumTitles({ song }:  Pick<Album, "song">) {
     <View style={stylesAlbumTitles.componentsContainer}>
       <Text style={stylesAlbumTitles.titleFavArtist}>Cet album contient</Text>
       <View>
-      <View>
-      <FlatList
-        data={song}
-        renderItem={( {item}: {item: Song} ) => {
-        return (
-            <SongItem songData={item} />
-        )
-    }}
-/>
-</View>
+        <View>
+          <FlatList
+            data={song}
+            renderItem={( {item}: {item: Song} ) => {
+            return (
+                <SongItem songData={item} />
+            )
+            }}
+          />
+        </View>
       </View>
     </View>
   );

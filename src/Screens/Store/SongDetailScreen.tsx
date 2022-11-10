@@ -13,7 +13,7 @@ export default function SongDetailScreen() {
     let navigation = useNavigation();
     
     return (
-        <SafeAreaView style={ styles.container }>
+        <View style={ styles.container }>
             <View >
                 <Image style={ styles.header }
                         source={require(`./../../../assets/images/store/bannière.png`)} 
@@ -29,8 +29,7 @@ export default function SongDetailScreen() {
                 </View >
             </View>
             <AlbumSelected buy={"Acheter le single"}/>
-
-        </SafeAreaView>
+        </View>
     );
 }
 
