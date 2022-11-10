@@ -13,7 +13,7 @@ export default function StoreDetailScreen() {
                 <Ionicons style={styles.searchIcon} name="ios-search" size={32} color="green" />
                 <TextInput
                     style={styles.input}
-                    placeholderTextColor="white" 
+                    placeholderTextColor="white"
                     placeholder="Rechercher un artiste, une musique..."
                 />
             </View>
@@ -42,11 +42,10 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     searchSection: {
-        marginTop: 15,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.backgroundBlueBlack,
+        backgroundColor: '#23262B',
     },
     searchIcon: {
         position: 'absolute',
@@ -56,11 +55,14 @@ const styles = StyleSheet.create({
         fontSize: 24
     },
     input: {
+        fontSize:13,
+        backgroundColor:'rgba(164, 74, 255, 0.3)',
+        opacity:'8%',
         width: '90%',
+        color:'white',
         borderRadius: 12.2,
-        borderColor: 'rgba(165, 74, 255, 0.3)',
-        backgroundColor: 'rgba(165, 74, 255, 0.3)',
-        height: 40,
+        borderColor: 'rgba(164, 74, 255, 0.3)',
+        height: 50,
         margin: 12,
         borderWidth: 1,
         padding: 10,
