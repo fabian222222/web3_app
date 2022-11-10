@@ -7,9 +7,7 @@ import { colors } from '../../DesignSystem/Colors'
 export default function StoreDetailScreen() {
     return (
         <ScrollView style={ styles.container }>
-            <View style={styles.header}>
-                <Text style={ styles.title }>Store</Text>
-            </View>
+
             <View style={styles.searchSection}>
                 <Ionicons style={styles.searchIcon} name="ios-search" size={32} color="green" />
                 <TextInput
@@ -42,6 +40,7 @@ const styles = StyleSheet.create({
         color: 'white'
     },
     searchSection: {
+        marginTop: 15,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',

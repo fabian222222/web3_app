@@ -115,7 +115,8 @@ const stylesAlbumSelected = StyleSheet.create({
     marginTop: 20,
     marginLeft: 20,
     height: 130,
-    width: 350,
+    width: '90%',
+    justifyContent: 'space-between',
     flexDirection: 'row',
   },
   percentageUp: {
@@ -222,7 +223,7 @@ const stylesBestSells = StyleSheet.create({
     alignItems: "center",
   },
   data: {
-    width: 240,
+    width: '80%',
   },
   item: {
     margin: 5,

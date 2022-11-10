@@ -106,7 +106,7 @@ const stylesAlbumTitles = StyleSheet.create({
     color: "white",
   },
   allData: {
-    width: 270,
+    width: '80%',
     height: 50,
     justifyContent: 'space-between',
     marginRight: 10
