@@ -3,7 +3,6 @@ import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import WalletScreen from './../../../Screens/Wallet/WalletScreen'
-import WalletHistory from './../../../Screens/Wallet/WalletHistory'
 
 import WalletHeader from '../../../Components/Wallet/Header/WalletHeader'
 
@@ -18,10 +17,6 @@ export default function UsersStack() {
                 options={{
                     header: () => <WalletHeader title='Mes achats' />,
                 }}
-            />
-            <HomeStack.Screen 
-                name="WalletHistory" 
-                component={ WalletHistory } 
             />
         </HomeStack.Navigator>
     );

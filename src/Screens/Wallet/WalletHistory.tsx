@@ -52,10 +52,8 @@ const WalletHistory = () => {
 
 const styles = StyleSheet.create({
     container: {
-        minHeight: '100%',
-        backgroundColor: colors.primaryBlack,
-        paddingHorizontal: 15,
-        paddingVertical: 15
+        flex: 1,
+        backgroundColor: colors.backgroundBlueBlack,
     },
     toggleContainer: {
         width: '100%',
@@ -63,10 +61,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         borderRadius: 50,
         overflow: 'hidden',
-        marginBottom: 20,
+        marginVertical: 20,
+        paddingHorizontal: 20,
     },
     toggle: {
-        width: '50%',
+        flex: 1,
         height: 50,
         justifyContent: 'center',
         alignItems: 'center',

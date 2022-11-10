@@ -87,7 +87,7 @@ export default function HomeScreen() {
                 <View style={ styles.blockSong }>
                     <Image
                         style={ styles.albumCover }
-                        source={require(`../../../assets/images/albumCover/album5.png`)} 
+                        source={require(`../../../assets/images/albumCover/Album5.png`)} 
                     />
                      <View>
                         <Text style={ styles.songTitle }>Song name - Artist</Text>
