@@ -1,16 +1,20 @@
 import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
+import { View, StyleSheet, Text, Image } from 'react-native'
 
 type Props = {
     borderBottomTheme: string,
     text: string,
-    stat: number,
+    textColor: string,
+    image: string
 }
 
-const DailyStatBlock = ({borderBottomTheme, text, stat}: Props) => {
+const DailyStatBlock = ({borderBottomTheme, text, textColor, image}: Props) => {
     return (
         <View>
-            <View style={[styles.container, {borderBottomColor: borderBottomTheme}]}></View>
+            <View style={[styles.container, {backgroundColor: borderBottomTheme}]}>
+                <Image style={styles.image} source={ image } />
+                <Text style={ { color: textColor, fontSize: 18 } } >{text}</Text>
+            </View>
         </View>
     )
 }
@@ -21,7 +25,13 @@ const styles = StyleSheet.create({
         width: 100,
         backgroundColor: 'white',
         borderRadius: 10,
-        borderBottomWidth: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    image: {
+        width: 30,
+        height: 30,
+        marginBottom: 10
     }
 })
 

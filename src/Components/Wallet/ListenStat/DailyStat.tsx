@@ -37,9 +37,9 @@ const DailyStat = () => {
                 </Pressable>
             </View>
             <View style={styles.statsContainer}>
-                <DailyStatBlock borderBottomTheme='#ED4E55' stat={20} text='daily token' />
-                <DailyStatBlock borderBottomTheme='#B90885' stat={20} text='total token' />
-                <DailyStatBlock borderBottomTheme='#27BD5C' stat={20} text='daily listen' />
+                <DailyStatBlock borderBottomTheme='rgba(237, 78, 85, .3)' text='+12' textColor='#EFCF4B' image={require('./../../../../assets/note-yellow.png')} />
+                <DailyStatBlock borderBottomTheme='rgba(165, 74, 255, .3)' text='15' textColor='#65CFEF' image={require('./../../../../assets/note-blue.png')} />
+                <DailyStatBlock borderBottomTheme='rgba(78, 84, 237, .3)' text='5h47' textColor='#A54AFF' image={require('./../../../../assets/time.png')} />
             </View>
         </View>
     )
