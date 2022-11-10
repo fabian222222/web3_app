@@ -39,8 +39,8 @@ export default function TabBarNavigator() {
                     )
                 }}     
             />
-             
-             <Tab.Screen 
+
+            <Tab.Screen 
                 name="SearchStack" component={ SearchStackScreen } 
                 options={{
                     tabBarIcon: ({focused}) => (

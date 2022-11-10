@@ -36,7 +36,7 @@ const data = {
 export default function SongDetailScreen() {
     const { params: songData } = useRoute() as {params: Song}
     let navigation = useNavigation();
-
+    
     return (
         <View style={ styles.container }>
             <View >
@@ -53,7 +53,7 @@ export default function SongDetailScreen() {
                     <Text style={ styles.headerTitleName }>{songData.name}</Text>
                 </View >
             </View>
-            <AlbumSelected buy={"Acheter le single"}/>
+            <AlbumSelected buy={"Acheter le single"} albumName={songData.name} />
             <Text style={styles.rate}>Taux d’écoute pour cette musique</Text>
             <LineChart
                     data={data}
