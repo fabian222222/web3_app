@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { SafeAreaView, Text, StyleSheet, View, Image } from "react-native"
+import  Music from '../../Components/Home/Music'
+
 
 export default function HomeScreen() {
     return (
@@ -85,7 +87,7 @@ export default function HomeScreen() {
                 <View style={ styles.blockSong }>
                     <Image
                         style={ styles.albumCover }
-                        source={require(`../../../assets/images/albumCover/album2.png`)} 
+                        source={require(`../../../assets/images/albumCover/album5.png`)} 
                     />
                      <View>
                         <Text style={ styles.songTitle }>Song name - Artist</Text>
@@ -102,7 +104,7 @@ export default function HomeScreen() {
                 <View style={ styles.blockSong }>
                     <Image
                         style={ styles.albumCover }
-                        source={require(`../../../assets/images/albumCover/album3.png`)} 
+                        source={require(`../../../assets/images/albumCover/album6.png`)} 
                     />
                     <View>
                         <Text style={ styles.songTitle }>Song name - Artist</Text>
@@ -123,6 +125,8 @@ export default function HomeScreen() {
             <View style={ styles.button }>
                 <Text style={ styles.title }>Voir les explications</Text>
             </View>
+
+            <Music />
         </View>
     );
 }
