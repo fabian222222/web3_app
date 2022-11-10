@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, TextInput, View, ScrollView, Text   } from "react-native"
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { FavoriteArtists, NewAlbums, BestSells }  from '../../Components/Store/ArtistAndAlbum/ArtistList'
+import Music from '../../Components/Home/Music'
 import { colors } from '../../DesignSystem/Colors'
 export default function StoreDetailScreen() {
     return (
@@ -19,6 +20,7 @@ export default function StoreDetailScreen() {
             <FavoriteArtists/>
             <NewAlbums/>
             <BestSells/>
+            <Music />
         </ScrollView>
     );
 }
