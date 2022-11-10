@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.backgroundBlueBlack,
     },
     header: {
+        top: 0,
         height: 75,
         width: '100%',
         position: 'absolute',

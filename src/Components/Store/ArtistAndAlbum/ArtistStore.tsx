@@ -161,7 +161,7 @@ const stylesAlbumSelected = StyleSheet.create({
 
 const stylesSong = StyleSheet.create({
   componentsContainer: {
-    marginTop: 10,
+    marginTop: 40,
     marginLeft: 20,
   },
   titleFavArtist: {
@@ -221,9 +221,10 @@ const stylesBestSells = StyleSheet.create({
   infoText: {
     flexDirection: "row",
     alignItems: "center",
+    width: '80%',
   },
   data: {
-    width: '80%',
+    marginRight: 10,
   },
   item: {
     margin: 5,
