@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     container: {
         height: '100%',
         backgroundColor: colors.backgroundBlueBlack,
+        paddingBottom: 70
     },
     header: {
         marginTop: 30,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet, Text, Image } from 'react-native'
+import { View, StyleSheet, Text, Image, Dimensions } from 'react-native'
 
 const Music = () => {
     return (
@@ -27,11 +27,12 @@ const Music = () => {
 
 const styles = StyleSheet.create({
     music: {
-        width: '100%',
-        marginVertical: 10,
+        width: Dimensions.get('screen').width,
         flexDirection: 'row',
-        justifyContent: 'space-between',
         backgroundColor: '#2D293B',
+        position: 'absolute',
+        bottom: 0,
+        right: 0
     },
     albumCover: {
         width: 60,
