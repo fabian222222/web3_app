@@ -9,19 +9,7 @@ export default function HomeScreen() {
         <View style={ styles.container }>
             <View> 
                 <View>
-                    <View style={{display: 'flex', justifyContent: 'space-between', flexDirection:'row', alignItems: 'center'}}>   
-                        <Text style={ styles.title }>Vous écoutez : </Text>
-                        <View style={ styles.tokens }>
-                            <View style={ styles.token }>
-                                <Text style={ styles.songText }>37 </Text>
-                                <Image source={require('../../../assets/note-yellow.png')} />
-                            </View>
-                            <View style={ styles.token }>
-                                <Text style={ styles.songText }>15 </Text>
-                                <Image source={require('../../../assets/note-blue.png')} />
-                            </View>
-                        </View>
-                    </View> 
+
                     <View style={{display: 'flex', justifyContent: 'space-around', flexDirection:'row', marginVertical: 20, alignItems: 'center'}}>
                         <View style={ styles.albumCover }>
                             <Image source={require('../../../assets/spotify.png')} />
@@ -85,9 +73,9 @@ export default function HomeScreen() {
                     />
                 </View>
                 <View style={ styles.blockSong }>
-                    <Image
+                <Image
                         style={ styles.albumCover }
-                        source={require(`../../../assets/images/albumCover/Album5.png`)} 
+                        source={require('../../../assets/images/albumCover/album1.png')} 
                     />
                      <View>
                         <Text style={ styles.songTitle }>Song name - Artist</Text>
@@ -137,7 +125,6 @@ const styles = StyleSheet.create({
         height: '100%',
         backgroundColor: '#23262B',
         paddingHorizontal: 20,
-        paddingTop: 60
     },
     title: {
         fontSize: 20,
