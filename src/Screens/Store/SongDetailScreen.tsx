@@ -4,7 +4,7 @@ import { colors } from '../../DesignSystem/Colors'
 import { useRoute } from '@react-navigation/native';
 import {  useNavigation } from "@react-navigation/native";
 import { Song } from '../../Interface/Store/FavoriteArtist'
-
+import Music from '../../Components/Home/Music'
 import { AlbumSelected } from '../../Components/Store/ArtistAndAlbum/ArtistStore'
 import { AlbumTitles } from '../../Components/Store/ArtistAndAlbum/AlbumCover'
 
@@ -36,6 +36,9 @@ export default function SongDetailScreen() {
                     source={require(`./../../../assets/stat.png`)} 
                 />
             </View>
+            <View  style={styles.music}>
+                <Music />
+            </View>
         </View>
     );
 }
@@ -44,6 +47,11 @@ const styles = StyleSheet.create({
     container: {
         height: '100%',
         backgroundColor: colors.backgroundBlueBlack,
+    },
+    music: {
+        position: 'absolute',
+        width: '100%',
+        bottom: 0
     },
     rate: {
         color: 'white',
