@@ -1,133 +1,110 @@
 import React from 'react';
 
-import { SafeAreaView, Text, StyleSheet, View, Image } from "react-native"
+import { SafeAreaView, ScrollView,  Text, StyleSheet, View, Image } from "react-native"
 import  Music from '../../Components/Home/Music'
 
 
 export default function HomeScreen() {
     return (
-        <View style={ styles.container }>
-            <View> 
-                <View>
-                    <View style={{display: 'flex', justifyContent: 'space-between', flexDirection:'row', alignItems: 'center'}}>   
-                        <Text style={ styles.title }>Vous écoutez : </Text>
-                        <View style={ styles.tokens }>
-                            <View style={ styles.token }>
-                                <Text style={ styles.songText }>37 </Text>
-                                <Image source={require('../../../assets/note-yellow.png')} />
+        <SafeAreaView>
+            <ScrollView style={ styles.container }>
+                <View style={{paddingHorizontal: 20,}}> 
+                    <View>
+                        <View style={{display: 'flex', justifyContent: 'space-around', flexDirection:'row', marginVertical: 20, alignItems: 'center'}}>
+                            <View style={ styles.albumCover }>
+                                <Image source={require('../../../assets/spotify.png')} />
                             </View>
-                            <View style={ styles.token }>
-                                <Text style={ styles.songText }>15 </Text>
-                                <Image source={require('../../../assets/note-blue.png')} />
+                            <View>
+                                <Text style={ styles.songTitle }>Song name - Artist</Text>
+                                <Text style={ styles.songText }>Votre session en cours : 54 min 56 sec </Text>
                             </View>
                         </View>
-                    </View> 
-                    <View style={{display: 'flex', justifyContent: 'space-around', flexDirection:'row', marginVertical: 20, alignItems: 'center'}}>
-                        <View style={ styles.albumCover }>
-                            <Image source={require('../../../assets/spotify.png')} />
+                    </View>
+                    <View></View>
+                </View>
+
+                <Text style={ styles.title }>Résumé</Text>
+                <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection:'row', marginVertical: 20, paddingHorizontal: 20,}}>
+                    <View style={ styles.blockToken }>
+                        <Text style={ styles.title }>Token Artiste</Text>
+                        <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection:'row', alignItems: 'center'}}>
+                            <Image source={require('../../../assets/token-yellow.png')} />
+                            <Text style={ styles.songText }> 32</Text>
                         </View>
+                        <Text style={ styles.songText }><Text  style={{ fontSize: 20,}}>+1 </Text> dans 25 min</Text>
+                    </View>
+                    <View style={ styles.blockToken }>
+                        <Text style={ styles.title }>Token Global</Text>
+                        <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection:'row',  alignItems: 'center'}}>
+                            <Image source={require('../../../assets/token-blue.png')} />
+                            <Text style={ styles.songText }> 32</Text>
+                        </View>
+                        <Text style={ styles.songText }><Text  style={{ fontSize: 20,}}>+1 </Text> dans 1 h</Text>
+                    </View>
+                </View>
+
+                <Text style={ styles.title }>Historique d'écoute</Text>
+                <View style={{ display: 'flex', justifyContent: 'space-between', marginVertical: 20, paddingHorizontal: 20,}}>
+                    <View style={ styles.blockSong }>
+                        <Image
+                            style={ styles.albumCover }
+                            source={require('../../../assets/images/albumCover/album1.png')} 
+                        />
                         <View>
                             <Text style={ styles.songTitle }>Song name - Artist</Text>
-                            <Text style={ styles.songText }>Votre session en cours : 54 min 56 sec </Text>
+                            <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row'}}>
+                                <Text style={ styles.songText }>Duration session </Text>
+                                <Text style={ styles.songText }> token: 20</Text>
+                            </View>
                         </View>
+                        <Image
+                            // style={ styles.albumCover }
+                            source={require('../../../assets/spotify.png')} 
+                        />
                     </View>
-                </View>
-                <View></View>
-            </View>
-
-
-
-
-
-            <Text style={ styles.title }>Résumé</Text>
-            <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection:'row', marginVertical: 20}}>
-                <View style={ styles.blockToken }>
-                    <Text style={ styles.title }>Token Artiste</Text>
-                    <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection:'row', alignItems: 'center'}}>
-                        <Image source={require('../../../assets/token-yellow.png')} />
-                        <Text style={ styles.songText }> 32</Text>
-                    </View>
-                    <Text style={ styles.songText }><Text  style={{ fontSize: 20,}}>+1 </Text> dans 25 min</Text>
-                </View>
-                <View style={ styles.blockToken }>
-                    <Text style={ styles.title }>Token Global</Text>
-                    <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection:'row',  alignItems: 'center'}}>
-                        <Image source={require('../../../assets/token-blue.png')} />
-                        <Text style={ styles.songText }> 32</Text>
-                    </View>
-                    <Text style={ styles.songText }><Text  style={{ fontSize: 20,}}>+1 </Text> dans 1 h</Text>
-                </View>
-            </View>
-
-            
-
-
-
-
-
-            <Text style={ styles.title }>Historique d'écoute</Text>
-            <View style={{ display: 'flex', justifyContent: 'space-between', marginVertical: 20}}>
-                <View style={ styles.blockSong }>
-                    <Image
-                        style={ styles.albumCover }
-                        source={require('../../../assets/images/albumCover/album1.png')} 
-                    />
-                    <View>
-                        <Text style={ styles.songTitle }>Song name - Artist</Text>
-                        <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row'}}>
-                            <Text style={ styles.songText }>Duration session </Text>
-                            <Text style={ styles.songText }> token: 20</Text>
+                    <View style={ styles.blockSong }>
+                        <Image
+                            style={ styles.albumCover }
+                            source={require(`../../../assets/images/albumCover/album99.png`)} 
+                        />
+                        <View>
+                            <Text style={ styles.songTitle }>Song name - Artist</Text>
+                            <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row'}}>
+                                <Text style={ styles.songText }>Duration session </Text>
+                                <Text style={ styles.songText }> token: 20</Text>
+                            </View>
                         </View>
+                        <Image
+                            // style={ styles.albumCover }
+                            source={require('../../../assets/apple.png')} 
+                        />
                     </View>
-                    <Image
-                        // style={ styles.albumCover }
-                        source={require('../../../assets/spotify.png')} 
-                    />
-                </View>
-                <View style={ styles.blockSong }>
-                    <Image
-                        style={ styles.albumCover }
-                        source={require(`../../../assets/images/albumCover/Album5.png`)} 
-                    />
-                     <View>
-                        <Text style={ styles.songTitle }>Song name - Artist</Text>
-                        <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row'}}>
-                            <Text style={ styles.songText }>Duration session </Text>
-                            <Text style={ styles.songText }> token: 20</Text>
+                    <View style={ styles.blockSong }>
+                        <Image
+                            style={ styles.albumCover }
+                            source={require(`../../../assets/images/albumCover/album6.png`)} 
+                        />
+                        <View>
+                            <Text style={ styles.songTitle }>Song name - Artist</Text>
+                            <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row'}}>
+                                <Text style={ styles.songText }>Duration session </Text>
+                                <Text style={ styles.songText }> token: 20</Text>
+                            </View>
                         </View>
+                        <Image
+                            // style={ styles.albumCover }
+                            source={require('../../../assets/youtube.png')} 
+                        />
                     </View>
-                    <Image
-                        // style={ styles.albumCover }
-                        source={require('../../../assets/apple.png')} 
-                    />
                 </View>
-                <View style={ styles.blockSong }>
-                    <Image
-                        style={ styles.albumCover }
-                        source={require(`../../../assets/images/albumCover/album6.png`)} 
-                    />
-                    <View>
-                        <Text style={ styles.songTitle }>Song name - Artist</Text>
-                        <View style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row'}}>
-                            <Text style={ styles.songText }>Duration session </Text>
-                            <Text style={ styles.songText }> token: 20</Text>
-                        </View>
-                    </View>
-                    <Image
-                        // style={ styles.albumCover }
-                        source={require('../../../assets/youtube.png')} 
-                    />
+
+                <Text style={ styles.title }>Comment ça fonctionne ?</Text>
+                <View style={ styles.button }>
+                    <Text style={ styles.title }>Voir les explications</Text>
                 </View>
-            </View>
-
-
-            <Text style={ styles.title }>Comment ça fonctionne ?</Text>
-            <View style={ styles.button }>
-                <Text style={ styles.title }>Voir les explications</Text>
-            </View>
-
-            <Music />
-        </View>
+                <Music />
+            </ScrollView>
+        </SafeAreaView>
     );
 }
 
@@ -136,13 +113,12 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         backgroundColor: '#23262B',
-        paddingHorizontal: 20,
-        paddingTop: 60
     },
     title: {
         fontSize: 20,
         fontWeight: '500',
         color: '#FFFFFF',
+        paddingHorizontal: 20,
     },
     blockToken: {
         backgroundColor: '#2D293B',
@@ -174,7 +150,6 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'
-
     },
     blockApp: {
         width: 50,
@@ -196,12 +171,13 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: '#4A316A',
         borderRadius: 12,
-        width: '100%',
+        width: '90%',
         height: 48,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        marginVertical: 20
+        marginVertical: 20,
+        marginHorizontal: 20,
     },
     tokens: {
         backgroundColor: '#2D293B',

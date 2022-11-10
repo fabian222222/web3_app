@@ -13,7 +13,7 @@ const Music = () => {
                 <Text style={ styles.albumText } >Session : 20 min sur Spotify</Text>
              </View>
 
-             <View style={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', paddingVertical: 4}}>
+             <View style={{ display: 'flex', flexDirection:'column', justifyContent: 'space-between', paddingVertical: 4, marginRight: 10}}>
                 <View style={{ display: 'flex', flexDirection:'row', alignItems: 'center',}}>
                     <Image source={require('../../../assets/token-yellow.png')} />
                     <Text style={ styles.albumText }> 32</Text>
@@ -28,7 +28,6 @@ const Music = () => {
 const styles = StyleSheet.create({
     music: {
         width: '100%',
-        marginVertical: 10,
         flexDirection: 'row',
         justifyContent: 'space-between',
         backgroundColor: '#2D293B',
