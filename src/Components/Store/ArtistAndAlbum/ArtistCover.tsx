@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native'
-
+import {  useNavigation } from "@react-navigation/native";
 import { FavoriteArtist } from '../../../Interface/Store/FavoriteArtist'
 
 const ArtistCover = ({artist}: {artist: FavoriteArtist}) => {
-    console.log(artist);
+    let navigation = useNavigation();
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate<{}>('ArtistDetail', artist ) }>
             <View style={ styles.container } >
                 <Image
                     style={ styles.albumCover }
