@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {  useNavigation } from "@react-navigation/native";
 import { View, StyleSheet, Text, FlatList, TouchableOpacity, SafeAreaView, ScrollView, Image } from 'react-native'
 import { favArtistData } from '../../../DataMockup/Store/artist'
 import { newAlbumData } from '../../../DataMockup/Store/album'
