@@ -1,12 +1,15 @@
 import React from 'react';
 
-import { StyleSheet, TextInput, View, ScrollView   } from "react-native"
+import { StyleSheet, TextInput, View, ScrollView, Text   } from "react-native"
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { FavoriteArtists, NewAlbums, BestSells }  from '../../Components/Store/ArtistAndAlbum/ArtistList'
 import { colors } from '../../DesignSystem/Colors'
 export default function StoreDetailScreen() {
     return (
         <ScrollView style={ styles.container }>
+            <View style={styles.header}>
+                <Text style={ styles.title }>Store</Text>
+            </View>
             <View style={styles.searchSection}>
                 <Ionicons style={styles.searchIcon} name="ios-search" size={32} color="green" />
                 <TextInput
@@ -26,6 +29,17 @@ const styles = StyleSheet.create({
     container: {
         height: '100%',
         backgroundColor: colors.backgroundBlueBlack,
+    },
+    header: {
+        marginTop: 30,
+        marginLeft: 20,
+        height: 40,
+    },
+    title: {
+        width: '100%',
+        fontSize: 20,
+        fontWeight: '700',
+        color: 'white'
     },
     searchSection: {
         flexDirection: 'row',
