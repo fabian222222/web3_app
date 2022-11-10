@@ -16,8 +16,8 @@ const ListenStat = () => {
         backgroundGradientTo: "#08130D",
         backgroundGradientToOpacity: 1,
         color: () => 'white',
-        strokeWidth: 2, // optional, default 3
-        useShadowColorFromDataset: false // optional
+        strokeWidth: 2, 
+        useShadowColorFromDataset: false 
     };    
 
     const screenWidth = Dimensions.get("window").width;
@@ -28,7 +28,7 @@ const ListenStat = () => {
           {
             data: [3, 12, 6, 9, 6, 12, 15],
             color: () => `white`,
-            strokeWidth: 2 // optional
+            strokeWidth: 2 
           }
         ],
     };

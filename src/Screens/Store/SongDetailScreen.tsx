@@ -11,7 +11,7 @@ import { AlbumTitles } from '../../Components/Store/ArtistAndAlbum/AlbumCover'
 export default function SongDetailScreen() {
     const { params: songData } = useRoute() as {params: Song}
     let navigation = useNavigation();
-    
+
     return (
         <View style={ styles.container }>
             <View >
@@ -29,6 +29,13 @@ export default function SongDetailScreen() {
                 </View >
             </View>
             <AlbumSelected buy={"Acheter le single"}/>
+            <Text style={styles.rate}>Taux d’écoute pour cette musique</Text>
+
+            <View style={ styles.stat }>
+                <Image 
+                    source={require(`./../../../assets/stat.png`)} 
+                />
+            </View>
         </View>
     );
 }
@@ -38,8 +45,22 @@ const styles = StyleSheet.create({
         height: '100%',
         backgroundColor: colors.backgroundBlueBlack,
     },
+    rate: {
+        color: 'white',
+        fontWeight:'700',
+        fontSize: 20,
+        marginLeft: 20,
+        marginTop: 15,
+    },
+    stat: {
+        alignItems: 'center',
+        marginTop: 20,
+        width: '100%'
+    },
     header: {
+        top: 0,
         height: 75,
+        width: '100%',
         position: 'absolute',
     },
     headerTitle: {
