@@ -13,20 +13,29 @@ const Tab = createBottomTabNavigator();
 
 export default function TabBarNavigator() {
     return (
-        <Tab.Navigator screenOptions={{ headerShown: false }}>
+        <Tab.Navigator 
+            screenOptions={{ 
+                headerShown: false,
+                tabBarStyle: {
+                    backgroundColor: '#23262B',
+                    borderTopWidth: 0
+                },
+                tabBarShowLabel: false
+            }}
+        >
             <Tab.Screen 
                 name="HomeStack" component={ HomeStackScreen } 
                 options={{
-                    tabBarIcon: () => (
-                        <FontAwesome name="home" size={24} color="black" />
-                    )
-                }}     
+                    tabBarIcon: ({focused}) => (
+                        <FontAwesome name="home" size={30} color={ focused ? '#A54AFF' : 'rgba(165, 74, 255, .33)' } />
+                    ),
+                }}   
             />
             <Tab.Screen 
                 name="StoreStack" component={ StoreStackScreens } 
                 options={{
-                    tabBarIcon: () => (
-                        <FontAwesome name="shopping-basket" size={24} color="black" />
+                    tabBarIcon: ({focused}) => (
+                        <FontAwesome name="shopping-basket" size={30} color={ focused ? '#A54AFF' : 'rgba(165, 74, 255, .33)' } />
                     )
                 }}     
             />
@@ -34,24 +43,24 @@ export default function TabBarNavigator() {
              <Tab.Screen 
                 name="SearchStack" component={ SearchScreen } 
                 options={{
-                    tabBarIcon: () => (
-                        <FontAwesome name="search" size={24} color="black" />
+                    tabBarIcon: ({focused}) => (
+                        <FontAwesome name="search" size={30} color={ focused ? '#A54AFF' : 'rgba(165, 74, 255, .33)' } />
                     )
                 }}     
             />
             <Tab.Screen 
                 name="WalletStack" component={ WalletScreen } 
                 options={{
-                    tabBarIcon: () => (
-                        <FontAwesome name="money" size={24} color="black" />
+                    tabBarIcon: ({focused}) => (
+                        <FontAwesome name="money" size={30} color={ focused ? '#A54AFF' : 'rgba(165, 74, 255, .33)' } />
                     )
                 }}     
             />
             <Tab.Screen 
                 name="SettingsStack" component={ SettingsScreen } 
                 options={{
-                    tabBarIcon: () => (
-                        <FontAwesome name="gear" size={24} color="black" />
+                    tabBarIcon: ({focused}) => (
+                        <FontAwesome name="gear" size={30} color={ focused ? '#A54AFF' : 'rgba(165, 74, 255, .33)' } />
                     )
                 }}     
             />
