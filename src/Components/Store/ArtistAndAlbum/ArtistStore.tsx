@@ -84,7 +84,7 @@ export function ArtistAlbums({ albums }: Pick<FavoriteArtist, "albums">) {
   );
 }
 
-export function AlbumSelected({buy}: { buy: string }) {
+export function AlbumSelected({buy, albumName}: { buy: string, albumName: string}) {  
   return (
     <View style={stylesAlbumSelected.componentsContainer}>
       <Image
@@ -92,7 +92,7 @@ export function AlbumSelected({buy}: { buy: string }) {
         source={require(`./../../../../assets/images/store/bannerAlbum1.png`)}
       />
       <View style={stylesAlbumSelected.data}>
-        <Text style={stylesAlbumSelected.title}>Sweet Dreams</Text>
+        <Text style={stylesAlbumSelected.title}>{albumName}</Text>
         <Text style={stylesAlbumSelected.rate}>Taux d’écoute : 
           <Image
             source={require(`./../../../../assets/up.png`)}

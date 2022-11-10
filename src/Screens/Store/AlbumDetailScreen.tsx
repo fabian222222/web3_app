@@ -29,9 +29,9 @@ export default function ArtistDetailScreen() {
                     <Text style={ styles.headerTitleName }>{album.artistName}</Text>
                 </View >
             </View>
-            <AlbumSelected buy={"Acheter l'album"}/>
+            <AlbumSelected buy={"Acheter l'album"} albumName={album.albumName}/>
             <AlbumTitles song={album.song}/>
-            <View  style={styles.music}>
+            <View style={styles.music}>
                 <Music />
             </View>
         </View>
