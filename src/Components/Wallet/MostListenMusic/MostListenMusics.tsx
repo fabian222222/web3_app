@@ -8,8 +8,9 @@ import { MostListen } from '../../../Interface/Wallet/MostListen'
 
 const MostListenMusics = () => {
     return (
-        <View>
+        <View style={styles.container}>
             <FlatList 
+                showsHorizontalScrollIndicator={false}
                 data={songs}
                 renderItem={( {item}: {item: MostListen} ) => {
                     return (
@@ -23,9 +24,7 @@ const MostListenMusics = () => {
 
 const styles = StyleSheet.create({
     container: {
-        height: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
+        paddingHorizontal: 20
     }
 })
 

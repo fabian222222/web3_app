@@ -7,6 +7,7 @@ import { Album } from '../../Interface/Store/FavoriteArtist'
 
 import { AlbumSelected } from '../../Components/Store/ArtistAndAlbum/ArtistStore'
 import { AlbumTitles } from '../../Components/Store/ArtistAndAlbum/AlbumCover'
+import Music from '../../Components/Home/Music';
 
 export default function ArtistDetailScreen() {
     const { params: album } = useRoute() as {params: Album}
@@ -30,7 +31,9 @@ export default function ArtistDetailScreen() {
             </View>
             <AlbumSelected buy={"Acheter l'album"}/>
             <AlbumTitles song={album.song}/>
-
+            <View  style={styles.music}>
+                <Music />
+            </View>
         </View>
     );
 }
@@ -39,6 +42,11 @@ const styles = StyleSheet.create({
     container: {
         height: '100%',
         backgroundColor: colors.backgroundBlueBlack,
+    },
+    music: {
+        position: 'absolute',
+        width: '100%',
+        bottom: 0
     },
     header: {
         top: 0,

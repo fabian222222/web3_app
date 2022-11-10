@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, StyleSheet, Text } from 'react-native'
+import { ScrollView, StyleSheet, SafeAreaView } from 'react-native'
 import { songs } from '../../../DataMockup/Wallet/ListenAllSongs'
 
 import AlbumStats from './AlbumStats'
@@ -34,25 +34,35 @@ const ListenStat = () => {
     };
 
     return (
-        <ScrollView style={styles.container}>
-           <LineChart
-                data={data}
-                width={screenWidth}
-                height={220}
-                chartConfig={chartConfig}
-                withDots={false}
-                withInnerLines={false}
-            />
-            <AlbumStats title='Albums les + écoutés' albums={songs} />
-            <AlbumStats title='Titres les + écoutés' albums={songs} />
-            <DailyStat />
-        </ScrollView>
+        <SafeAreaView style={styles.container}>
+            <ScrollView style={styles.statContainer}>
+            <LineChart
+                    data={data}
+                    width={screenWidth - 20}
+                    height={220}
+                    chartConfig={chartConfig}
+                    withDots={false}
+                    withInnerLines={false}
+                    style={styles.chart}
+                    />
+                <AlbumStats title='Albums les + écoutés' albums={songs} />
+                <AlbumStats title='Titres les + écoutés' albums={songs} />
+                <DailyStat />
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        height: '100%',
+        flex: 1,
+    },
+    statContainer: {
+        paddingHorizontal: 20
+    },
+    chart: {
+        marginLeft: -20,
+        marginBottom: 20
     }
 })
 

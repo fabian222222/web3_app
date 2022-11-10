@@ -12,7 +12,7 @@ const DailyStat = () => {
     const [day, setDay] = useState(BEFORE_YESTERDAY)
 
     return (
-        <View>
+        <View style={styles.container}>
             <View style={styles.dayContainer}>
                 <Pressable onPress={() => {
                     setDay(BEFORE_YESTERDAY)
@@ -47,9 +47,7 @@ const DailyStat = () => {
 
 const styles = StyleSheet.create({
     container: {
-        height: '100%',
-        alignItems: 'center',
-        justifyContent: 'center',
+        paddingBottom: 20
     },
     dayContainer: {
         paddingHorizontal: 40,
