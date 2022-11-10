@@ -3,7 +3,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { FontAwesome } from '@expo/vector-icons';
 
-import HomeStackScreen from './../Screens/Home/HomeScreen'
+import HomeStackScreen from './../Router/Stacks/Home/HomeStackScreens'
 import SearchStackScreen from './Stacks/Search/SearchStackScreens'
 import WalletScreen from './../Router/Stacks/Wallet/WalletStackScreens'
 import StoreStackScreens from './../Router/Stacks/Store/StoreStackScreens'
