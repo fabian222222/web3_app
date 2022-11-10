@@ -19,19 +19,19 @@ export default function SearchScreen() {
             <View style={styles.recommended}>
 
             <Pressable style={styles.popular} >
-            <Text  >Lil Nas X</Text>
+            <Text style={styles.popit} >Lild Nas X</Text>
             </Pressable>
             <Pressable style={styles.popular} >
-            <Text >Montero</Text>
+            <Text style={styles.popit}>Montero</Text>
             </Pressable>
             <Pressable style={styles.popular} >
-            <Text >Family Ties</Text>
+            <Text style={styles.popit}>Family Ties</Text>
             </Pressable>
             <Pressable style={styles.popular} >
-            <Text >The Northern Boys</Text>
+            <Text style={styles.popit}>The Northern Boys</Text>
             </Pressable>
             <Pressable style={styles.popular} >
-            <Text >I/ME/MYSELF</Text>
+            <Text style={styles.popit}>I/ME/MYSELF</Text>
             </Pressable>
             </View>
             <Text style={styles.title}>Recherche Récentes</Text>
@@ -55,6 +55,10 @@ const styles = StyleSheet.create({
         flex: 3,
         backgroundColor: '#23262B',
     },
+    popit: {
+        color:'white',
+        fontSize:'12',
+    },
     recentit: {
         fontSize:'14',
         color:'white',
@@ -69,10 +73,11 @@ const styles = StyleSheet.create({
         flexWrap: "wrap",
     },
     popular: {
+        color:'white',
         margin: 15,
         borderRadius: 15,
         padding:10,
-        backgroundColor: '#D9D9D9',
+        backgroundColor:'rgba(164, 74, 255, 0.3)',
     },
     title: {
     fontWeight:'bold',
@@ -94,7 +99,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#23262B',
     },
     searchIcon: {
-        backgroundColor: 'rgba(164, 74, 255, 0.08)',
+        backgroundColor:'rgba(164, 74, 255, 0.3)',
         position: 'absolute',
         right: 30,
         zIndex: 1,
@@ -103,12 +108,12 @@ const styles = StyleSheet.create({
     },
     input: {
         fontSize:13,
-        backgroundColor:'rgba(164, 74, 255, 0.08)',
+        backgroundColor:'rgba(164, 74, 255, 0.3)',
         opacity:'8%',
         width: '90%',
         color:'white',
         borderRadius: 12.2,
-        borderColor: 'rgba(164, 74, 255, 0.08)',
+        borderColor: 'rgba(164, 74, 255, 0.3)',
         height: 50,
         margin: 12,
         borderWidth: 1,
