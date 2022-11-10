@@ -16,7 +16,7 @@ export function FavoriteArtists()  {
     return (
         <View style={ stylesArtist.componentsContainer }>
             <Text style={ stylesArtist.titleFavArtist }>Vos artistes préférés</Text>
-            <View>
+            <View style={ stylesArtist.listFav }>
                 <FlatList
                     horizontal={true}
                     data={favArtistData}
@@ -87,13 +87,15 @@ const stylesArtist = StyleSheet.create({
         fontSize: 20,
         color: 'white'
     },
+    listFav: {
+        marginLeft: -10
+    }
 })
 
 const stylesBestSells = StyleSheet.create({
     componentsContainer: {
         marginTop: 10,
         marginLeft: 20,
-
     },
     infoText: {
         marginLeft: -140
@@ -122,7 +124,7 @@ const stylesBestSells = StyleSheet.create({
         alignItems: 'center'
     },
     playIcon: {
-        marginRight: 10
+        marginLeft: 20
     },
     albumText: {
         lineHeight: 26,

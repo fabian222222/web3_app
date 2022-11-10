@@ -345,4 +345,170 @@ export const favArtistData: FavoriteArtist[] = [
       },
     ],
   },
+  {
+    img: "",
+    name: "Marshmallow",
+    rate: 405,
+    listener: 40000,
+    topSong: {
+      name: "Faded",
+      listenCount: "1 643 512 105",
+    },
+    albums: [
+      {
+        albumName: "Album 1",
+        albumLenght: "15h12min",
+        artistName: "Marshmallow",
+        song: [
+          {
+            name: 'song 1',
+            listener: 500,
+            isTrending: false,
+          },
+          {
+            name: 'song 2',
+            listener: 500,
+            isTrending: true,
+          },
+          {
+            name: 'song 3',
+            listener: 500,
+            isTrending: false,
+          },
+        ]
+      },
+      {
+        albumName: "Album 2",
+        albumLenght: "15h12min",
+        artistName: "Marshmallow",
+        song: [
+          {
+            name: 'song 1',
+            listener: 500,
+            isTrending: false,
+          },
+          {
+            name: 'song 2',
+            listener: 500,
+            isTrending: true,
+          },
+          {
+            name: 'song 3',
+            listener: 500,
+            isTrending: false,
+          },
+        ]
+      },
+      {
+        albumName: "Album 3",
+        albumLenght: "15h12min",
+        artistName: "Marshmallow",
+        song: [
+          {
+            name: 'song 1',
+            listener: 500,
+            isTrending: false,
+          },
+          {
+            name: 'song 2',
+            listener: 500,
+            isTrending: true,
+          },
+          {
+            name: 'song 3',
+            listener: 500,
+            isTrending: false,
+          },
+        ]
+      },
+      {
+        albumName: "Album 4",
+        albumLenght: "15h12min",
+        artistName: "Marshmallow",
+        song: [
+          {
+            name: 'song 1',
+            listener: 500,
+            isTrending: false,
+          },
+          {
+            name: 'song 2',
+            listener: 500,
+            isTrending: true,
+          },
+          {
+            name: 'song 3',
+            listener: 500,
+            isTrending: false,
+          },
+        ]
+      },
+      {
+        albumName: "Album 5",
+        albumLenght: "15h12min",
+        artistName: "Marshmallow",
+        song: [
+          {
+            name: 'song 1',
+            listener: 500,
+            isTrending: false,
+          },
+          {
+            name: 'song 2',
+            listener: 500,
+            isTrending: true,
+          },
+          {
+            name: 'song 3',
+            listener: 500,
+            isTrending: false,
+          },
+        ]
+      },
+      {
+        albumName: "Album 6",
+        albumLenght: "15h12min",
+        artistName: "Marshmallow",
+        song: [
+          {
+            name: 'song 1',
+            listener: 500,
+            isTrending: false,
+          },
+          {
+            name: 'song 2',
+            listener: 500,
+            isTrending: true,
+          },
+          {
+            name: 'song 3',
+            listener: 500,
+            isTrending: false,
+          },
+        ]
+      },
+      {
+        albumName: "Album 7",
+        albumLenght: "15h12min",
+        artistName: "Marshmallow",
+        song: [
+          {
+            name: 'song 1',
+            listener: 500,
+            isTrending: false,
+          },
+          {
+            name: 'song 2',
+            listener: 500,
+            isTrending: true,
+          },
+          {
+            name: 'song 3',
+            listener: 500,
+            isTrending: false,
+          },
+        ]
+      },
+    ],
+  },
 ];
