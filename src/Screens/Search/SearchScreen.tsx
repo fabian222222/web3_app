@@ -2,6 +2,7 @@ import React from 'react';
 
 import { SafeAreaView, Text, StyleSheet, TextInput, View, Button ,Alert, Pressable } from "react-native"
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { FontAwesome } from '@expo/vector-icons'; 
 
 export default function SearchScreen() {
     return (
@@ -15,17 +16,16 @@ export default function SearchScreen() {
                 />
             </View>
 
-            <Text style={styles.title}>Recherche Populaires</Text>
+            <Text style={styles.title}>Recherches Populaires</Text>
             <View style={styles.recommended}>
-
             <Pressable style={styles.popular} >
-            <Text style={styles.popit} >Lild Nas X</Text>
+            <Text style={styles.popit} >Lil Nas X</Text>
             </Pressable>
             <Pressable style={styles.popular} >
             <Text style={styles.popit}>Montero</Text>
             </Pressable>
             <Pressable style={styles.popular} >
-            <Text style={styles.popit}>Family Ties</Text>
+            <Text style={styles.popit}>Family Ties (baby keem)</Text>
             </Pressable>
             <Pressable style={styles.popular} >
             <Text style={styles.popit}>The Northern Boys</Text>
@@ -34,15 +34,36 @@ export default function SearchScreen() {
             <Text style={styles.popit}>I/ME/MYSELF</Text>
             </Pressable>
             </View>
-            <Text style={styles.title}>Recherche Récentes</Text>
 
             <View style={styles.recent}>
-            <Text style={styles.recentit}>Chinese Chicken</Text>
-            <Text style={styles.recentit}>Recherche Récentes</Text>
-            <Text style={styles.recentit}>Recherche Récentes</Text>
-            <Text style={styles.recentit}>Recherche Récentes</Text>
-            <Text style={styles.recentit}>Recherche Récentes</Text>
-            <Text style={styles.recentit}>Recherche Récentes</Text>
+            <Text style={styles.title}>Recherches Récentes</Text>
+
+
+            <View style={styles.flex}>
+            <Text style={styles.recentit}>Titre de chanson</Text>
+            <Text style={styles.recentit}>X</Text>
+            </View>
+            <View style={styles.flex}>
+            <Text style={styles.recentit}>Titre de chanson</Text>
+            <Text style={styles.recentit}>X</Text>
+            </View>
+            <View style={styles.flex}>
+            <Text style={styles.recentit}>Titre de chanson</Text>
+            <Text style={styles.recentit}>X</Text>
+            </View>
+            <View style={styles.flex}>
+            <Text style={styles.recentit}>Titre de chanson</Text>
+            <Text style={styles.recentit}>X</Text>
+            </View>
+            <View style={styles.flex}>
+            <Text style={styles.recentit}>Titre de chanson</Text>
+            <Text style={styles.recentit}>X</Text>
+            </View>
+            <View style={styles.flex}>
+            <Text style={styles.recentit}>Titre de chanson</Text>
+            <Text style={styles.recentit}>X</Text>
+            </View>
+            
 
             </View>
 
@@ -51,6 +72,15 @@ export default function SearchScreen() {
 }
 
 const styles = StyleSheet.create({
+    flex: {
+        flexDirection:'row',
+        justifyContent:'space-between',
+        marginHorizontal:10,
+        marginBottom:5,
+    },
+    cross: {
+    marginTop:10,
+    },
     recent: {
         flex: 3,
         backgroundColor: '#23262B',
@@ -66,16 +96,15 @@ const styles = StyleSheet.create({
         margin:5,
     },
     recommended: {
-        height:40,
-        backgroundColor: '#23262B',
-        flex: 1,
         flexDirection:'row',
         flexWrap: "wrap",
+        marginBottom:20,
     },
     popular: {
         color:'white',
-        margin: 15,
         borderRadius: 15,
+        marginVertical:5,
+        marginHorizontal:15,
         padding:10,
         backgroundColor:'rgba(164, 74, 255, 0.3)',
     },
@@ -99,7 +128,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#23262B',
     },
     searchIcon: {
-        backgroundColor:'rgba(164, 74, 255, 0.3)',
         position: 'absolute',
         right: 30,
         zIndex: 1,

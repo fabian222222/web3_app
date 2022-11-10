@@ -7,6 +7,31 @@ import { Song } from '../../Interface/Store/FavoriteArtist'
 import Music from '../../Components/Home/Music'
 import { AlbumSelected } from '../../Components/Store/ArtistAndAlbum/ArtistStore'
 import { AlbumTitles } from '../../Components/Store/ArtistAndAlbum/AlbumCover'
+import { Dimensions } from "react-native"
+import { LineChart } from "react-native-chart-kit"
+
+const chartConfig = {
+    backgroundGradientFrom: "rgba(165, 74, 255, .08)",
+    backgroundGradientFromOpacity: .1,
+    backgroundGradientTo: "rgba(165, 74, 255, .08)",
+    backgroundGradientToOpacity: .1,
+    color: () => 'white',
+    strokeWidth: 2, 
+    useShadowColorFromDataset: false 
+};    
+
+const screenWidth = Dimensions.get("window").width;
+
+const data = {
+    labels: ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"],
+    datasets: [
+      {
+        data: [3, 12, 6, 9, 6, 12, 15],
+        color: () => `white`,
+        strokeWidth: 2 
+      }
+    ],
+};
 
 export default function SongDetailScreen() {
     const { params: songData } = useRoute() as {params: Song}
@@ -30,12 +55,15 @@ export default function SongDetailScreen() {
             </View>
             <AlbumSelected buy={"Acheter le single"}/>
             <Text style={styles.rate}>Taux d’écoute pour cette musique</Text>
-
-            <View style={ styles.stat }>
-                <Image 
-                    source={require(`./../../../assets/stat.png`)} 
+            <LineChart
+                    data={data}
+                    width={screenWidth - 40}
+                    height={220}
+                    chartConfig={chartConfig}
+                    withDots={false}
+                    withInnerLines={false}
+                    style={styles.stat}
                 />
-            </View>
             <View  style={styles.music}>
                 <Music />
             </View>
@@ -63,7 +91,7 @@ const styles = StyleSheet.create({
     stat: {
         alignItems: 'center',
         marginTop: 20,
-        width: '100%'
+        borderRadius: 10
     },
     header: {
         top: 0,
